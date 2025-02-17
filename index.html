@@ -129,6 +129,56 @@
             transform: translateY(-5px);
         }
 
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .product-card {
+            background-color: var(--card-background);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 {
+            margin: 1rem 0;
+            color: var(--primary-color);
+        }
+
+        .product-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .product-button:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
         .contact-form {
             background-color: var(--card-background);
             padding: 2rem;
@@ -218,6 +268,7 @@
         }
 
         @media (max-width: 768px) {
+            .products-grid,
             .tips-grid {
                 grid-template-columns: 1fr;
             }
@@ -237,6 +288,10 @@
             header h1 {
                 font-size: 2rem;
             }
+
+            .product-card img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -246,6 +301,33 @@
         <p>Bescherm & Verfraai uw Hout</p>
         <a href="https://www.e-woodproducts.be/collections/restol-houtolie" class="top-cta">Naar de Webshop</a>
     </header>
+
+    <section class="section">
+        <h2>Onze Topproducten</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <!-- Vervang [PAD-NAAR-AFBEELDINGEN] met het juiste pad naar uw afbeeldingsmap -->
+                <img src="[PAD-NAAR-AFBEELDINGEN]/restol-houtolie-naturel-uv-extra.jpg" alt="RESTOL HOUTOLIE NATUREL UV EXTRA">
+                <h3>RESTOL HOUTOLIE NATUREL UV EXTRA</h3>
+                <p>1 liter</p>
+                <a href="https://www.e-woodproducts.be/collections/restol-houtolie" class="product-button">Bekijk Product</a>
+            </div>
+            
+            <div class="product-card">
+                <img src="[PAD-NAAR-AFBEELDINGEN]/restol-houtolie-lichtgrijs.jpg" alt="RESTOL HOUTOLIE LICHTGRIJS">
+                <h3>RESTOL HOUTOLIE LICHTGRIJS</h3>
+                <p>1 liter</p>
+                <a href="https://www.e-woodproducts.be/collections/restol-houtolie" class="product-button">Bekijk Product</a>
+            </div>
+            
+            <div class="product-card">
+                <img src="[PAD-NAAR-AFBEELDINGEN]/restol-houtolie-white-wash.jpg" alt="RESTOL HOUTOLIE WHITE WASH">
+                <h3>RESTOL HOUTOLIE WHITE WASH</h3>
+                <p>1 liter</p>
+                <a href="https://www.e-woodproducts.be/collections/restol-houtolie" class="product-button">Bekijk Product</a>
+            </div>
+        </div>
+    </section>
 
     <section class="section">
         <h2>De Kracht van Natuurlijke Bescherming</h2>
@@ -285,110 +367,7 @@
     </section>
 
     <section class="section">
-        <h2>Onze Topproducten</h2>
-        <div class="products-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
-            <div class="product-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;">
-                <img src="/api/placeholder/543/608" alt="RESTOL HOUTOLIE NATUREL UV EXTRA" style="width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;">
-                <h3 style="margin: 1rem 0;">RESTOL HOUTOLIE NATUREL UV EXTRA</h3>
-                <p style="margin-bottom: 1.5rem;">1 liter</p>
-                <a href="https://www.e-woodproducts.be/collections/restol-houtolie" class="cta-button" style="font-size: 1rem; padding: 0.8rem 1.5rem;">Bekijk Product</a>
-            </div>
-            
-            <div class="product-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;">
-                <img src="/api/placeholder/543/608" alt="RESTOL HOUTOLIE LICHTGRIJS" style="width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;">
-                <h3 style="margin: 1rem 0;">RESTOL HOUTOLIE LICHTGRIJS</h3>
-                <p style="margin-bottom: 1.5rem;">1 liter</p>
-                <a href="https://www.e-woodproducts.be/collections/restol-houtolie" class="cta-button" style="font-size: 1rem; padding: 0.8rem 1.5rem;">Bekijk Product</a>
-            </div>
-            
-            <div class="product-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;">
-                <img src="/api/placeholder/543/608" alt="RESTOL HOUTOLIE WHITE WASH" style="width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;">
-                <h3 style="margin: 1rem 0;">RESTOL HOUTOLIE WHITE WASH</h3>
-                <p style="margin-bottom: 1.5rem;">1 liter</p>
-                <a href="https://www.e-woodproducts.be/collections/restol-houtolie" class="cta-button" style="font-size: 1rem; padding: 0.8rem 1.5rem;">Bekijk Product</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
         <h2>Veelgestelde Vragen</h2>
         <div class="highlight-box">
             <h3>Hoe vaak moet ik houtolie aanbrengen?</h3>
-            <p>Dit hangt af van de weersomstandigheden en de mate van belasting. Voor buitenhout adviseren we jaarlijks onderhoud, voor binnenhout volstaat meestal een behandeling om de 2-3 jaar.</p>
-        </div>
-        
-        <div class="highlight-box">
-            <h3>Kan ik houtolie op alle houtsoorten gebruiken?</h3>
-            <p>Houtolie is geschikt voor vrijwel alle houtsoorten, maar de absorptie en het eindresultaat kunnen verschillen. Test altijd eerst op een onopvallende plaats en kies een olie die specifiek geschikt is voor uw houtsoort.</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Contact</h2>
-        <div class="company-info">
-            <h3>BV E-Products Europe</h3>
-            <p>Patijntjestraat 107<br>9000 Gent</p>
-            <p>BTW: BE 0500.621.156</p>
-            <p>E-mail: support@e-woodproducts.com</p>
-            <p>Bankgegevens:<br>
-            BIC: GEBA BE BB<br>
-            IBAN: BE 61 0016 8384 4117</p>
-        </div>
-
-        <div class="contact-form">
-            <div class="success-message">Uw bericht is succesvol verzonden!</div>
-            <div class="error-message">Er is een fout opgetreden. Probeer het opnieuw.</div>
-            
-            <form id="contactForm" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="name">Naam</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject">Onderwerp</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Bericht</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Verstuur Bericht</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 houtolie-kopen.be - Alle rechten voorbehouden</p>
-    </footer>
-
-    <script>
-        function handleSubmit(event) {
-            event.preventDefault();
-            
-            const successMessage = document.querySelector('.success-message');
-            const errorMessage = document.querySelector('.error-message');
-            
-            // Hier zou normaal de logica komen voor het versturen van het formulier
-            // Voor nu tonen we alleen het succes bericht
-            successMessage.style.display = 'block';
-            errorMessage.style.display = 'none';
-            
-            // Reset form
-            document.getElementById('contactForm').reset();
-            
-            // Verberg succes bericht na 5 seconden
-            setTimeout(() => {
-                successMessage.style.display = 'none';
-            }, 5000);
-        }
-    </script>
-</body>
-</html>
+            <p>Dit hangt af van de weersomstandigheden en de mate van belasting. Voor buitenhout adviseren we jaarlijks onderhoud, voor binn
